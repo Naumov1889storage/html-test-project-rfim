@@ -1,0 +1,153 @@
+extends pug-components/layout
+
+block header
+    header.header
+        .container
+            .top.flex_row__between.align_center
+                ul.nav.flex_row__between
+                    li.nav__item
+                        a(href="") Главная
+                    li.nav__item
+                        a(href="#sectionServices" class="link-spy") Услуги
+                    li.nav__item
+                        a(href="#sectionFranchise" class="link-spy") Франшиза
+                    li.nav__item
+                        a(href="#sectionContact" class="link-spy") Контакты
+                .links.flex_row.align_center
+                    a(class="social social_instagram" href="#" title="Инстаграм")
+                    span.slash-vertical
+                    .apps Скачайте наше приложение:
+                        a(class="apps__appstore" href="#" title="Скачайте приложение через App Store")
+                        a(class="apps__googleplay" href="#" title="Скачайте приложение через Google Play")
+
+            .subTop.flex_row__between
+                img(class="subTop__logo" src="img/logo-bronsons-white.png" alt="Лого барбершопа Bronson")
+                .address
+                    span.address__text г. Москва, Гончарная Набережная, д. 9/16, с. 2
+                    button(class="address__button" id="address__button" type="button") Выбери свой барбершоп
+                button.burger
+                    i
+            h1.header__title.h1.text_color_white Англия в твоём городе
+            .header__bottom.flex_row__center.align_start
+                button.online.btn-primary записаться онлайн
+                .enter
+                    a(class="enter__btn btn-transparent link-spy" href="#sectionFranchise") Стать владельцем барбершопа
+                    .enter__subtitle Первая франшиза без паушального взноса
+
+
+block content
+    .sectionServices
+        .container
+            h2.h2#sectionServices Наши услуги
+            span.divider_moustache
+            ul.services.flex_row__between.flex_wrap
+                li.services__item.block_framed
+                    span.services__name.text_color_white.h3 мужская<br>стрижка
+                    img(class="services__picture" src="img/picture-services-1.jpg")
+                li.services__item.block_framed
+                    span.h3.services__name.text_color_white.h3 моделирование<br>бороды
+                    img(class="services__picture" src="img/picture-services-2.jpg")
+                li.services__item.block_framed
+                    span.services__name.text_color_white.h3 опасное<br>бритье
+                    img(class="services__picture" src="img/picture-services-3.jpg")
+                li.services__item.block_framed
+                    span.services__name.text_color_white.h3 детсткая<br>стрижка
+                    img(class="services__picture" src="img/picture-services-4.jpg")
+
+
+    .sectionFranchise.text_color_white
+        .container
+            h2.h2.sectionFranchise__title#sectionFranchise ОТКРОЙ СОБСТВЕННЫЙ БАРБЕРШОП У СЕБЯ В ГОРОДЕ
+            span.divider_moustache.divider_moustache_white
+            .sectionFranchise__wrap.flex_row__between.align_start
+                ul.features.flex_row.flex_wrap
+                    li.features__item.block_framed_transparent
+                        .h4 Сопровождение
+                        p Выезд  команды, которая обучит вас управлению барбершопом Bronsons в ваш город.
+                    li.features__item.block_framed_transparent
+                        .h4 Уникальный дизайн
+                        p Уникальный дизайн-проект вашего помещения в лучших английских традициях.
+                    li.features__item.block_framed_transparent
+                        .h4 Онлайн запись
+                        p Простая и удобная онлайн запись в приложениях на всех типах устройств.
+                    li.features__item.block_framed_transparent
+                        .h4 Большие скидки
+                        p Экономия от 150 000 рублей при покупке косметики и оборудования от прямых производителей.
+
+                .form__wrap.text_color_black.block_framed
+                    .form__title.h4 Заполните форму и наш менеджер с вами свяжется
+                    .divider_moustache
+                    form.form.flex_column.align_center
+                        .input_icon.input_icon_name
+                            input(class="form__input" placeholder="Ваше имя и фамилия")
+                        .input_icon.input_icon_phone
+                            input(class="form__input" placeholder="Ваш номер телефона")
+                        .input_icon.input_icon_email
+                            input(class="form__input" placeholder="Ваше e-mail")
+                        .input_icon.input_icon_city
+                            input(class="form__input" placeholder="Желаемый город")
+                        button.form__button.btn-primary ОТПРАВИТЬ ЗАЯВКУ
+                        .form__checkbox.checkbox.checkbox_icon
+                            input(type="checkbox" id="franchise_agreement")
+                            label(for="franchise_agreement") Даю согласие на обработку моих <a class="text_color_gold" href="#">персональных данных</a>
+
+    .sectionContact
+        .sectionContact__map#map_content
+        .container
+            .contact.block_framed
+                h2.h2#sectionContact Контакты
+                span.divider_moustache
+
+                .contact__info +7 (495) 920-33-45
+                .contact__subinfo (Номер филиала)
+                .contact__info +7 (965) 077-74-44
+                .contact__subinfo (Номер франшизы)
+                .contact__info г. Москва, Гончарная Набережная, д. 9/16, с. 2
+                a(class="contact__btn btn-primary" href="#modal__form_call" rel="modal:open") заказать звонок
+
+block footer
+    footer.footer
+        .container
+            .footer__wrap.flex_row__start.align_center.flex_wrap
+                .logo
+                    img(class="logo__img" src="img/logo-bronsons-black.png" alt="Лого барбершопа Bronson")
+                .privacyPolicy
+                    a(class="privacyPolicy__link text_color_black" href="#") Политика конфиденциальности
+                .createdBy Разработка сайта <a class="createdBy__link" href="#">rfim.ru</a>
+
+    #modal__form_call.modal.block_framed
+        .h4 Заполните форму и наш менеджер с вами свяжется
+        span.divider_moustache.divider_moustache_black
+        form.form.flex_column.align_center
+            .input_icon.input_icon_name
+                input(class="form__input" placeholder="Ваше имя и фамилия")
+            .input_icon.input_icon_phone
+                input(class="form__input" placeholder="Ваш номер телефона")
+            button.form__button.btn-primary ОТПРАВИТЬ ЗАЯВКУ
+            .form__checkbox.checkbox.checkbox_icon
+                input(type="checkbox" id="call_agreement")
+                label(for="call_agreement") Даю согласие на обработку моих <a class="text_color_gold" href="#">персональных данных</a>
+    .chooseBarbershop
+        .container
+            button(type="button" class="cross_circle" id="chooseBarbershop__close")
+            img(class="chooseBarbershop__logo" src="img/logo-bronsons-black.png" alt="Лого барбершопа Bronson")
+            ul.cities
+                li.cities__item.city
+                    span.cities__name.h4 <span class="cities__letter">М</span> Москва
+                    span.city__item.cities__address Гончарная Набережная, д. 9/16, с. 2
+                    span.city__item.cities__phone +7 (495) 920-33-45
+                    span.city__item.cities__schedule Режим работы: с 10:00 до 22:00
+                li.cities__item
+                    span.cities__name.h4 <span class="cities__letter">С</span> Санкт-Петербург
+                    span.city__item.cities__coming Coming soon...
+                li.cities__item
+                    span.cities__name.h4 <span class="cities__letter">М</span> Минск
+                    span.city__item.cities__coming Coming soon...
+                li.cities__item
+                    span.cities__name.h4 <span class="cities__letter">Н</span> Новый Уренгой
+                    span.city__item.cities__coming Coming soon...
+                li.cities__item
+                    span.cities__name.h4 <span class="cities__letter">М</span> Мончегорск
+                    span.city__item.cities__coming Coming soon...
+
+    .overlay

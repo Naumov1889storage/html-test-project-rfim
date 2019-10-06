@@ -1,0 +1,94 @@
+/*MINIMALISTIC CUSTOM CHECKBOX AND RADIO BEGIN ===================*/
+.checkbox {
+    height: 26px;
+}
+
+.checkbox input + label {
+    cursor: pointer;
+}
+
+.checkbox input:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox input:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 40px;
+}
+
+.checkbox input:not(checked) + label:before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    background: #cdd1da;
+}
+
+.checkbox input:not(checked) + label:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -10.4px;
+    left: 3.1px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #ffffff;
+    transition: .13s
+}
+
+.checkbox input:checked + label:after {
+    opacity: 1;
+    transition: .13s
+}
+/*MINIMALISTIC STYLIZED CHECKBOX AND RADIO BEGIN ===================*/
+
+/*CHECKBOX AND RADIO AS A SLIDER BEGIN ==============================*/
+.checkbox.slider input:not(checked) + label {
+    padding: 0 0 0 60px;
+}
+
+.checkbox.slider input:not(checked) + label:before {
+    width: 50px;
+    border-radius: 13px;
+}
+
+.checkbox.slider input:not(checked) + label:after {
+    opacity: 1;
+}
+
+.checkbox.slider input:checked + label:before {
+    background: #9fd468;
+}
+
+.checkbox.slider input:checked + label:after {
+    left: 26px;
+}
+/*CHECKBOX AND RADIO AS A SLIDER END ==============================/
+
+/*ICON ON CHECKED BEGIN ===================================*/
+.checkbox.checkbox_icon input:not(checked) + label:before {
+    border-radius: 3px;
+}
+.checkbox.checkbox_icon input:not(checked) + label:after {
+    background:  url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNzguMzY5IDc4LjM2OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNzguMzY5IDc4LjM2OTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGQ9Ik03OC4wNDksMTkuMDE1TDI5LjQ1OCw2Ny42MDZjLTAuNDI4LDAuNDI4LTEuMTIxLDAuNDI4LTEuNTQ4LDBMMC4zMiw0MC4wMTVjLTAuNDI3LTAuNDI2LTAuNDI3LTEuMTE5LDAtMS41NDdsNi43MDQtNi43MDQgICBjMC40MjgtMC40MjcsMS4xMjEtMC40MjcsMS41NDgsMGwyMC4xMTMsMjAuMTEybDQxLjExMy00MS4xMTNjMC40MjktMC40MjcsMS4xMi0wLjQyNywxLjU0OCwwbDYuNzAzLDYuNzA0ICAgQzc4LjQ3NywxNy44OTQsNzguNDc3LDE4LjU4Niw3OC4wNDksMTkuMDE1eiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+    -webkit-background-size: cover;
+    background-size: cover;
+    transform: scale(.8);
+}
+.checkbox.checkbox_icon input:checked + label:after {
+    opacity: 1;
+    transition: .13s;
+    transform: scale(1);
+}
+.checkbox.checkbox_icon input:not(checked) + label:after {
+    left: 5px;
+    width: 17px;
+    height: 18px;
+}
+/*ICON ON CHECKED END ===================================*/

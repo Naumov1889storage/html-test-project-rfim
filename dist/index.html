@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Bronsons</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;display=swap">
+    <link rel="stylesheet" href="css/concat-css-libs.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&amp;lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="top flex_row__between align_center">
+          <ul class="nav flex_row__between">
+            <li class="nav__item"><a href="">Главная</a></li>
+            <li class="nav__item"><a class="link-spy" href="#sectionServices">Услуги</a></li>
+            <li class="nav__item"><a class="link-spy" href="#sectionFranchise">Франшиза</a></li>
+            <li class="nav__item"><a class="link-spy" href="#sectionContact">Контакты</a></li>
+          </ul>
+          <div class="links flex_row align_center"><a class="social social_instagram" href="#" title="Инстаграм"></a><span class="slash-vertical"></span>
+            <div class="apps">Скачайте наше приложение:<a class="apps__appstore" href="#" title="Скачайте приложение через App Store"></a><a class="apps__googleplay" href="#" title="Скачайте приложение через Google Play"></a></div>
+          </div>
+        </div>
+        <div class="subTop flex_row__between"><img class="subTop__logo" src="img/logo-bronsons-white.png" alt="Лого барбершопа Bronson">
+          <div class="address"><span class="address__text">г. Москва, Гончарная Набережная, д. 9/16, с. 2</span>
+            <button class="address__button" id="address__button" type="button">Выбери свой барбершоп</button>
+          </div>
+          <button class="burger"><i></i></button>
+        </div>
+        <h1 class="header__title h1 text_color_white">Англия в твоём городе</h1>
+        <div class="header__bottom flex_row__center align_start">
+          <button class="online btn-primary">записаться онлайн</button>
+          <div class="enter"><a class="enter__btn btn-transparent link-spy" href="#sectionFranchise">Стать владельцем барбершопа</a>
+            <div class="enter__subtitle">Первая франшиза без паушального взноса</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="sectionServices">
+      <div class="container">
+        <h2 class="h2" id="sectionServices">Наши услуги</h2><span class="divider_moustache"></span>
+        <ul class="services flex_row__between flex_wrap">
+          <li class="services__item block_framed"><span class="services__name text_color_white h3">мужская<br>стрижка</span><img class="services__picture" src="img/picture-services-1.jpg"></li>
+          <li class="services__item block_framed"><span class="h3 services__name text_color_white h3">моделирование<br>бороды</span><img class="services__picture" src="img/picture-services-2.jpg"></li>
+          <li class="services__item block_framed"><span class="services__name text_color_white h3">опасное<br>бритье</span><img class="services__picture" src="img/picture-services-3.jpg"></li>
+          <li class="services__item block_framed"><span class="services__name text_color_white h3">детсткая<br>стрижка</span><img class="services__picture" src="img/picture-services-4.jpg"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sectionFranchise text_color_white">
+      <div class="container">
+        <h2 class="h2 sectionFranchise__title" id="sectionFranchise">ОТКРОЙ СОБСТВЕННЫЙ БАРБЕРШОП У СЕБЯ В ГОРОДЕ</h2><span class="divider_moustache divider_moustache_white"></span>
+        <div class="sectionFranchise__wrap flex_row__between align_start">
+          <ul class="features flex_row flex_wrap">
+            <li class="features__item block_framed_transparent">
+              <div class="h4">Сопровождение</div>
+              <p>Выезд  команды, которая обучит вас управлению барбершопом Bronsons в ваш город.</p>
+            </li>
+            <li class="features__item block_framed_transparent">
+              <div class="h4">Уникальный дизайн</div>
+              <p>Уникальный дизайн-проект вашего помещения в лучших английских традициях.</p>
+            </li>
+            <li class="features__item block_framed_transparent">
+              <div class="h4">Онлайн запись</div>
+              <p>Простая и удобная онлайн запись в приложениях на всех типах устройств.</p>
+            </li>
+            <li class="features__item block_framed_transparent">
+              <div class="h4">Большие скидки</div>
+              <p>Экономия от 150 000 рублей при покупке косметики и оборудования от прямых производителей.</p>
+            </li>
+          </ul>
+          <div class="form__wrap text_color_black block_framed">
+            <div class="form__title h4">Заполните форму и наш менеджер с вами свяжется</div>
+            <div class="divider_moustache"></div>
+            <form class="form flex_column align_center">
+              <div class="input_icon input_icon_name">
+                <input class="form__input" placeholder="Ваше имя и фамилия">
+              </div>
+              <div class="input_icon input_icon_phone">
+                <input class="form__input" placeholder="Ваш номер телефона">
+              </div>
+              <div class="input_icon input_icon_email">
+                <input class="form__input" placeholder="Ваше e-mail">
+              </div>
+              <div class="input_icon input_icon_city">
+                <input class="form__input" placeholder="Желаемый город">
+              </div>
+              <button class="form__button btn-primary">ОТПРАВИТЬ ЗАЯВКУ</button>
+              <div class="form__checkbox checkbox checkbox_icon">
+                <input type="checkbox" id="franchise_agreement">
+                <label for="franchise_agreement">Даю согласие на обработку моих <a class="text_color_gold" href="#">персональных данных</a></label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sectionContact">
+      <div class="sectionContact__map" id="map_content"></div>
+      <div class="container">
+        <div class="contact block_framed">
+          <h2 class="h2" id="sectionContact">Контакты</h2><span class="divider_moustache"></span>
+          <div class="contact__info">+7 (495) 920-33-45</div>
+          <div class="contact__subinfo">(Номер филиала)</div>
+          <div class="contact__info">+7 (965) 077-74-44</div>
+          <div class="contact__subinfo">(Номер франшизы)</div>
+          <div class="contact__info">г. Москва, Гончарная Набережная, д. 9/16, с. 2</div><a class="contact__btn btn-primary" href="#modal__form_call" rel="modal:open">заказать звонок</a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap flex_row__start align_center flex_wrap">
+          <div class="logo"><img class="logo__img" src="img/logo-bronsons-black.png" alt="Лого барбершопа Bronson"></div>
+          <div class="privacyPolicy"><a class="privacyPolicy__link text_color_black" href="#">Политика конфиденциальности</a></div>
+          <div class="createdBy">Разработка сайта <a class="createdBy__link" href="#">rfim.ru</a></div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal block_framed" id="modal__form_call">
+      <div class="h4">Заполните форму и наш менеджер с вами свяжется</div><span class="divider_moustache divider_moustache_black"></span>
+      <form class="form flex_column align_center">
+        <div class="input_icon input_icon_name">
+          <input class="form__input" placeholder="Ваше имя и фамилия">
+        </div>
+        <div class="input_icon input_icon_phone">
+          <input class="form__input" placeholder="Ваш номер телефона">
+        </div>
+        <button class="form__button btn-primary">ОТПРАВИТЬ ЗАЯВКУ</button>
+        <div class="form__checkbox checkbox checkbox_icon">
+          <input type="checkbox" id="call_agreement">
+          <label for="call_agreement">Даю согласие на обработку моих <a class="text_color_gold" href="#">персональных данных</a></label>
+        </div>
+      </form>
+    </div>
+    <div class="chooseBarbershop">
+      <div class="container">
+        <button class="cross_circle" type="button" id="chooseBarbershop__close"></button><img class="chooseBarbershop__logo" src="img/logo-bronsons-black.png" alt="Лого барбершопа Bronson">
+        <ul class="cities">
+          <li class="cities__item city"><span class="cities__name h4"><span class="cities__letter">М</span> Москва</span><span class="city__item cities__address">Гончарная Набережная, д. 9/16, с. 2</span><span class="city__item cities__phone">+7 (495) 920-33-45</span><span class="city__item cities__schedule">Режим работы: с 10:00 до 22:00</span></li>
+          <li class="cities__item"><span class="cities__name h4"><span class="cities__letter">С</span> Санкт-Петербург</span><span class="city__item cities__coming">Coming soon...</span></li>
+          <li class="cities__item"><span class="cities__name h4"><span class="cities__letter">М</span> Минск</span><span class="city__item cities__coming">Coming soon...</span></li>
+          <li class="cities__item"><span class="cities__name h4"><span class="cities__letter">Н</span> Новый Уренгой</span><span class="city__item cities__coming">Coming soon...</span></li>
+          <li class="cities__item"><span class="cities__name h4"><span class="cities__letter">М</span> Мончегорск</span><span class="city__item cities__coming">Coming soon...</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/concat-js-libs.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

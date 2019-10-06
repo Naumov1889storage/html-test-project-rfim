@@ -1,0 +1,43 @@
+doctype html
+html(lang="ru-Ru")
+    head
+        meta(charset = 'utf-8')
+        meta(name='viewport', content="initial-scale=1.0, width=device-width")
+        block title
+            -var title = "Bronsons"
+            -var page = ''
+        title #{title + (page.length ? " - " : "") + (typeof page === 'string' ? page : page[page.length - 1])}
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap')
+        link(rel='stylesheet', href='css/concat-css-libs.css')
+        link(rel='stylesheet', href='css/common.css')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css')
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=c599d252-3a6f-4b64-872c-a529f6263f40&lang=ru_RU" type="text/javascript")
+    body
+        block header
+            mixin header
+                .header
+                    p Hi, World
+
+            if page == 'Главная'
+                .header
+                    +header
+            else if page != 'Главная'
+                .header.notindexpage
+                    +header
+
+
+
+
+
+        block content
+            | Ling yellowtail flagtail southern flounder. Ribbon eel northern pike glass knifefish cepalin barbelless catfish cusk-eel ridgehead, mahi-mahi. Glass knifefish snubnose eel pompano dolphinfish lemon shark salmon duckbilled barracudina common tunny skate, codlet. Perch tarpon, zebra pleco--round herring jewfish, New Zealand sand diver. Spiny dwarf catfish slickhead clown triggerfish. Shad New Zealand sand diver cavefish banjo catfish bamboo shark spiny basslet, pigfish handfish.
+        block footer
+            .footer
+                p hgfghfgh
+
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js")
+        script(src='js/concat-js-libs.js')
+        script(src='js/common.js')
+
+
