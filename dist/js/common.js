@@ -38,12 +38,12 @@ $(function () {
             currentLink.addClass('active');
         }, 300);
 
-    })
+    });
 
 // скрипт отвечающие за карту
     if ($('#map_content').length) {
         ymaps.ready(function (e) {
-            var myCenter = [55.737403, 37.645245]
+            var myCenter = [55.737403, 37.645245];
             if ($(window).width() < 950) {
                 var myCenter = [55.737003, 37.648245]
             }
@@ -66,7 +66,7 @@ $(function () {
                     // Необходимо указать данный тип макета.
                     iconLayout: 'default#image',
                     // Своё изображение иконки метки.
-                    iconImageHref: '../img/placemark-bronsons.png',
+                    iconImageHref: 'img/placemark-bronsons.png',
                     // Размеры метки.
                     iconImageSize: [87, 115],
                     // Смещение левого верхнего угла иконки относительно
